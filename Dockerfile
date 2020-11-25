@@ -1,4 +1,4 @@
-FROM node
+FROM node:lts
 
 # replace shell with bash so we can source files
 # RUN rm /bin/sh && ln -s /bin/bash /bin/sh
@@ -8,10 +8,10 @@ RUN apt-get -y update \
 
 RUN npm install --global dependency-cruiser
 
-WORKDIR /atm/node
+WORKDIR /skill
 
 # COPY /target/spring-format-0.1.0-SNAPSHOT-jar-with-dependencies.jar .
 COPY commit.json .
 COPY run.sh .
 
-ENTRYPOINT ["/atm/node/run.sh"]
+ENTRYPOINT ["/skill/run.sh"]
