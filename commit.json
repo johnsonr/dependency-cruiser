@@ -1,8 +1,8 @@
 {
   "strategy": "pr",
   "pullRequest": {
-    "title": "",
-    "body": "Here's a generated SVG: WITH LINK",
+    "title": "Add up-to-date dependency graph",
+    "body": "![Dependency graph](dependencygraph.svg \"Dependency graph\")",
     "branch": "atomist/dependency-cruiser"
   },
   "commit": {
