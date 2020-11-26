@@ -13,18 +13,19 @@ if [[ ! -f package.json ]] ; then
 fi
 
 pwd
-ls
+ls -a
 echo 'executing dependency-cruiser...'
-
-tree src
 
 cp /skill/.dependency-cruiser.js .
 
-# Show what we have to the log
-depcruise --include-only "^src" --output-type dot src
+depcruise --info
 
+# Show what we have to the log
+depcruise --progress cli-feedback --include-only "^src" --output-type dot src
+
+# Hangs
 # depcruise -v -T dot src | dot -T svg | depcruise-wrap-stream-in-html > dependency-graph.html
 
 depcruise --include-only "^src" --output-type dot src | dot -T svg > dependencygraph.svg
 
-cp commit.json $ATOMIST_PUSH
+cp /skill/commit.json $ATOMIST_OUTPUT_DIR/push.json

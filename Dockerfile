@@ -4,6 +4,11 @@ RUN apt-get -y update \
     && apt-get install -y graphviz \
     && apt-get install tree
 
+# Install transpilers
+RUN npm install --global typescript
+RUN npm install --global coffeescript
+RUN npm install --global livescript
+
 RUN npm install --global dependency-cruiser
 
 WORKDIR /skill

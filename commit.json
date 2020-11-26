@@ -2,7 +2,7 @@
   "strategy": "pr",
   "pullRequest": {
     "title": "",
-    "body": "Here's a generate SVG: WITH LINK",
+    "body": "Here's a generated SVG: WITH LINK",
     "branch": "atomist/dependency-cruiser"
   },
   "commit": {

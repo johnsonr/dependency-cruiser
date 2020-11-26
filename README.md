@@ -1,6 +1,6 @@
-# spring-format
+# dependency-cruiser
 
-This library adds dependency graphs to your Node repos by wrapping [dependency-cruiser](https://www.npmjs.com/package/dependency-cruiser).
+This library adds dependency graphs to your Node repos by wrapping [dependency-cruiser](https://www.npmjs.com/package/dependency-cruiser) in a Docker container.
 
 ## Development
 
@@ -11,6 +11,8 @@ docker tag springrod:dependency-cruiser springrod/dependency-cruiser
 docker push springrod/dependency-cruiser                           
 
 ```
+
+Test locally with `./local.sh`.
 
 Created by [Atomist][atomist].
 Need Help? [Join our Slack team][slack].
