@@ -1,3 +1,5 @@
+set -o pipefail
+
 docker build --tag springrod/dependency-cruiser .
 
 export ATOMIST_PUSH="/atm/home/commit.json"

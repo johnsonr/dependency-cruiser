@@ -14,7 +14,14 @@ fi
 
 pwd
 ls
-echo 'executing depcruise...'
+echo 'executing dependency-cruiser...'
+
+dot --help
+
+tree src
+
+# Show what we have to the log
+depcruise --include-only "^src" --output-type dot src
 
 depcruise --include-only "^src" --output-type dot src | dot -T svg > dependencygraph.svg
 

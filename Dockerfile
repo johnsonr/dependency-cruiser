@@ -4,7 +4,8 @@ FROM node:lts
 # RUN rm /bin/sh && ln -s /bin/bash /bin/sh
 
 RUN apt-get -y update \
-    && apt-get install -y graphviz
+    && apt-get install -y graphviz \
+    && apt-get install tree
 
 RUN npm install --global dependency-cruiser
 
