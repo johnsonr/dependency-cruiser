@@ -16,12 +16,14 @@ pwd
 ls
 echo 'executing dependency-cruiser...'
 
-dot --help
-
 tree src
+
+cp /skill/.dependency-cruiser.js .
 
 # Show what we have to the log
 depcruise --include-only "^src" --output-type dot src
+
+# depcruise -v -T dot src | dot -T svg | depcruise-wrap-stream-in-html > dependency-graph.html
 
 depcruise --include-only "^src" --output-type dot src | dot -T svg > dependencygraph.svg
 

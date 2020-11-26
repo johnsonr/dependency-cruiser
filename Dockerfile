@@ -1,7 +1,4 @@
-FROM node:lts
-
-# replace shell with bash so we can source files
-# RUN rm /bin/sh && ln -s /bin/bash /bin/sh
+FROM node:14.4.0
 
 RUN apt-get -y update \
     && apt-get install -y graphviz \
@@ -11,8 +8,8 @@ RUN npm install --global dependency-cruiser
 
 WORKDIR /skill
 
-# COPY /target/spring-format-0.1.0-SNAPSHOT-jar-with-dependencies.jar .
 COPY commit.json .
 COPY run.sh .
+COPY .dependency-cruiser.js .
 
 ENTRYPOINT ["/skill/run.sh"]
