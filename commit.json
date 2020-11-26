@@ -1,4 +1,11 @@
 {
-  "strategy": "commit",
-  "commit": { "message": "Spring format fixes" }
+  "strategy": "pr",
+  "pullRequest": {
+    "title": "",
+    "body": "Here's a generate SVG: WITH LINK",
+    "branch": "atomist/dependency-cruiser"
+  },
+  "commit": {
+    "message": "Add dependency graph"
+  }
 }
