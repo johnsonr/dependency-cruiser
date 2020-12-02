@@ -6,9 +6,9 @@ This library adds dependency graphs to your Node repos by wrapping [dependency-c
 
 ```
 docker build --tag springrod:dependency-cruiser .
-docker run springrod:dependency-cruiser  
+docker run springrod:dependency-cruiser
 docker tag springrod:dependency-cruiser springrod/dependency-cruiser
-docker push springrod/dependency-cruiser                           
+docker push springrod/dependency-cruiser
 
 ```
 
